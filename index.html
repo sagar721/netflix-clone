@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="StreamFlix - Your premium destination to discover and watch movies. Browse trending, top-rated, action, comedy and more." />
+    <meta name="keywords" content="movies, streaming, watch online, Netflix clone, movie trailers" />
+    <title>StreamFlix – Watch Movies & TV Online</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN (Play CDN – full utility set for development) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'netflix-red':        '#E50914',
+              'netflix-dark':       '#141414',
+              'netflix-gray':       '#808080',
+              'netflix-light-gray': '#B3B3B3',
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+            animation: {
+              'shimmer':   'shimmer 2s linear infinite',
+              'fade-in':   'fadeIn 0.4s ease-in-out',
+              'slide-up':  'slideUp 0.5s ease-out',
+              'scale-in':  'scaleIn 0.3s ease-out',
+            },
+            keyframes: {
+              shimmer: {
+                '0%':   { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition:  '200% 0' },
+              },
+              fadeIn: {
+                '0%':   { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%':   { transform: 'translateY(24px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)',    opacity: '1' },
+              },
+              scaleIn: {
+                '0%':   { transform: 'scale(0.95)', opacity: '0' },
+                '100%': { transform: 'scale(1)',    opacity: '1' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-netflix-dark text-white font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
